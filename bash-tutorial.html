@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-11-26 Tue 20:23 -->
+<!-- 2019-11-26 Tue 20:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Bash Tutorial</title>
@@ -258,108 +258,108 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf72b1f1">Introduction</a>
+<li><a href="#orgb55791c">Introduction</a>
 <ul>
-<li><a href="#org05f3e64">Background</a></li>
+<li><a href="#org2f1cd3e">Background</a></li>
 </ul>
 </li>
-<li><a href="#org5720c76">Variables</a>
+<li><a href="#orgd150403">Variables</a>
 <ul>
-<li><a href="#orgb6e98b4">Simple usage</a></li>
-<li><a href="#orgc05feee">Inline usage</a></li>
-<li><a href="#org13ba3d3">Arithmetic Operations on variables</a></li>
-<li><a href="#org990676a">Increment variable</a></li>
+<li><a href="#orgc28bd66">Simple usage</a></li>
+<li><a href="#orgec6f595">Inline usage</a></li>
+<li><a href="#org741efb9">Arithmetic Operations on variables</a></li>
+<li><a href="#orgb255822">Increment variable</a></li>
 </ul>
 </li>
-<li><a href="#orgce1a066">Arrays</a>
+<li><a href="#org7bf558b">Arrays</a>
 <ul>
-<li><a href="#org72d74f8">Single Dimensional Arrays</a></li>
-<li><a href="#orgd1ebc3a">Multi Dimensional Arrays</a></li>
+<li><a href="#org6f03f8b">Single Dimensional Arrays</a></li>
+<li><a href="#org9ab6409">Multi Dimensional Arrays</a></li>
 </ul>
 </li>
-<li><a href="#org2149d62">Control Statements</a>
+<li><a href="#orga04a1a9">Control Statements</a>
 <ul>
-<li><a href="#org156b63b">If</a>
+<li><a href="#org51b97e8">If</a>
 <ul>
-<li><a href="#orge28aa11">Simple If</a></li>
-<li><a href="#org2419cad">If..Else</a></li>
-<li><a href="#org6448f3e">If..Else if..Else</a></li>
-<li><a href="#org832c212">if file exists</a></li>
-<li><a href="#org6461212">if directory exists</a></li>
+<li><a href="#org9b8f1f0">Simple If</a></li>
+<li><a href="#org3683b3b">If..Else</a></li>
+<li><a href="#org773d3ed">If..Else if..Else</a></li>
+<li><a href="#org278d199">if file exists</a></li>
+<li><a href="#org61304d7">if directory exists</a></li>
 </ul>
 </li>
-<li><a href="#org20f1623">Conditional Operators</a>
+<li><a href="#org157979a">Conditional Operators</a>
 <ul>
-<li><a href="#org17f4bda">Example</a></li>
-<li><a href="#orgcb3f85d">List of Operators</a></li>
+<li><a href="#org0e7ec8d">Example</a></li>
+<li><a href="#org6a74c29">List of Operators</a></li>
 </ul>
 </li>
-<li><a href="#orgcfec062">For loop</a></li>
+<li><a href="#orga8dbbd5">For loop</a></li>
 </ul>
 </li>
-<li><a href="#orge049d92">Built-In Utilities</a>
+<li><a href="#org6add281">Built-In Utilities</a>
 <ul>
-<li><a href="#orgc548eae">Sequence generator</a>
+<li><a href="#org79bc16c">Sequence generator</a>
 <ul>
-<li><a href="#org1a85aec">seq</a></li>
-<li><a href="#org870474f">seq with fixed width</a></li>
+<li><a href="#org372b134">seq</a></li>
+<li><a href="#orgd03e2bc">seq with fixed width</a></li>
 </ul>
 </li>
-<li><a href="#orgd426767">Date</a>
+<li><a href="#org26d70b3">Date</a>
 <ul>
-<li><a href="#org7f154af">Seconds since Epoch</a></li>
-<li><a href="#org50de840">Time elapsed</a></li>
-<li><a href="#orge2ce470">Formatting time</a></li>
+<li><a href="#orga3dc71e">Seconds since Epoch</a></li>
+<li><a href="#org23c954e">Time elapsed</a></li>
+<li><a href="#orga4ab7fb">Formatting time</a></li>
 </ul>
 </li>
-<li><a href="#org6667427">PID</a>
+<li><a href="#org1bdedec">PID</a>
 <ul>
-<li><a href="#orgaf4aad0">PID of most recently executed background job</a></li>
+<li><a href="#org9125d3e">PID of most recently executed background job</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org1828c3e">External Utilities</a>
+<li><a href="#org9e4071b">External Utilities</a>
 <ul>
-<li><a href="#orgd79dda8">Curl</a>
+<li><a href="#org209759d">Curl</a>
 <ul>
-<li><a href="#org677b810">Ignore SSL</a></li>
-<li><a href="#org6c42840">Get HTTP Status code</a></li>
+<li><a href="#orgf60b18b">Ignore SSL</a></li>
+<li><a href="#orgfdf548f">Get HTTP Status code</a></li>
 </ul>
 </li>
-<li><a href="#org8ab4ccc">SED</a>
+<li><a href="#org9294979">SED</a>
 <ul>
-<li><a href="#org351ce23">Replace String</a></li>
+<li><a href="#orgdb1a75b">Replace String</a></li>
 </ul>
 </li>
-<li><a href="#org413adf7">JQ</a></li>
-<li><a href="#org8ef447c">XARGS</a></li>
+<li><a href="#orga075ad4">JQ</a></li>
+<li><a href="#org68de418">XARGS</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgf72b1f1" class="outline-2">
-<h2 id="orgf72b1f1">Introduction</h2>
-<div class="outline-text-2" id="text-orgf72b1f1">
+<div id="outline-container-orgb55791c" class="outline-2">
+<h2 id="orgb55791c">Introduction</h2>
+<div class="outline-text-2" id="text-orgb55791c">
 </div>
-<div id="outline-container-org05f3e64" class="outline-3">
-<h3 id="org05f3e64">Background</h3>
-<div class="outline-text-3" id="text-org05f3e64">
+<div id="outline-container-org2f1cd3e" class="outline-3">
+<h3 id="org2f1cd3e">Background</h3>
+<div class="outline-text-3" id="text-org2f1cd3e">
 <p>
 <b>GNU Bash</b> or simply <b>Bash</b> is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org5720c76" class="outline-2">
-<h2 id="org5720c76">Variables</h2>
-<div class="outline-text-2" id="text-org5720c76">
+<div id="outline-container-orgd150403" class="outline-2">
+<h2 id="orgd150403">Variables</h2>
+<div class="outline-text-2" id="text-orgd150403">
 </div>
-<div id="outline-container-orgb6e98b4" class="outline-3">
-<h3 id="orgb6e98b4">Simple usage</h3>
-<div class="outline-text-3" id="text-orgb6e98b4">
+<div id="outline-container-orgc28bd66" class="outline-3">
+<h3 id="orgc28bd66">Simple usage</h3>
+<div class="outline-text-3" id="text-orgc28bd66">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">name</span>=Dhyan
 <span class="org-variable-name">age</span>=39
@@ -373,9 +373,9 @@ Hello Dhyan, you dont look like 39
 </pre>
 </div>
 </div>
-<div id="outline-container-orgc05feee" class="outline-3">
-<h3 id="orgc05feee">Inline usage</h3>
-<div class="outline-text-3" id="text-orgc05feee">
+<div id="outline-container-orgec6f595" class="outline-3">
+<h3 id="orgec6f595">Inline usage</h3>
+<div class="outline-text-3" id="text-orgec6f595">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">i</span>=10
 
@@ -390,9 +390,9 @@ The code is e10b
 </pre>
 </div>
 </div>
-<div id="outline-container-org13ba3d3" class="outline-3">
-<h3 id="org13ba3d3">Arithmetic Operations on variables</h3>
-<div class="outline-text-3" id="text-org13ba3d3">
+<div id="outline-container-org741efb9" class="outline-3">
+<h3 id="org741efb9">Arithmetic Operations on variables</h3>
+<div class="outline-text-3" id="text-org741efb9">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">a</span>=1
 <span class="org-variable-name">b</span>=2
@@ -406,9 +406,9 @@ The code is e10b
 </pre>
 </div>
 </div>
-<div id="outline-container-org990676a" class="outline-3">
-<h3 id="org990676a">Increment variable</h3>
-<div class="outline-text-3" id="text-org990676a">
+<div id="outline-container-orgb255822" class="outline-3">
+<h3 id="orgb255822">Increment variable</h3>
+<div class="outline-text-3" id="text-orgb255822">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">i</span>=1
 
@@ -447,13 +447,13 @@ The code is e10b
 </div>
 </div>
 
-<div id="outline-container-orgce1a066" class="outline-2">
-<h2 id="orgce1a066">Arrays</h2>
-<div class="outline-text-2" id="text-orgce1a066">
+<div id="outline-container-org7bf558b" class="outline-2">
+<h2 id="org7bf558b">Arrays</h2>
+<div class="outline-text-2" id="text-org7bf558b">
 </div>
-<div id="outline-container-org72d74f8" class="outline-3">
-<h3 id="org72d74f8">Single Dimensional Arrays</h3>
-<div class="outline-text-3" id="text-org72d74f8">
+<div id="outline-container-org6f03f8b" class="outline-3">
+<h3 id="org6f03f8b">Single Dimensional Arrays</h3>
+<div class="outline-text-3" id="text-org6f03f8b">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">arr</span>=(Bash <span class="org-string">"is simple"</span> yet powerful )
 <span class="org-builtin">echo</span> ${<span class="org-variable-name">arr</span>[0]}
@@ -467,9 +467,9 @@ is simple
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd1ebc3a" class="outline-3">
-<h3 id="orgd1ebc3a">Multi Dimensional Arrays</h3>
-<div class="outline-text-3" id="text-orgd1ebc3a">
+<div id="outline-container-org9ab6409" class="outline-3">
+<h3 id="org9ab6409">Multi Dimensional Arrays</h3>
+<div class="outline-text-3" id="text-org9ab6409">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-builtin">declare</span> -A aa
 <span class="org-variable-name">aa</span>[shell]=Bash
@@ -485,17 +485,17 @@ We are using Bash in this example
 </div>
 </div>
 
-<div id="outline-container-org2149d62" class="outline-2">
-<h2 id="org2149d62">Control Statements</h2>
-<div class="outline-text-2" id="text-org2149d62">
+<div id="outline-container-orga04a1a9" class="outline-2">
+<h2 id="orga04a1a9">Control Statements</h2>
+<div class="outline-text-2" id="text-orga04a1a9">
 </div>
-<div id="outline-container-org156b63b" class="outline-3">
-<h3 id="org156b63b">If</h3>
-<div class="outline-text-3" id="text-org156b63b">
+<div id="outline-container-org51b97e8" class="outline-3">
+<h3 id="org51b97e8">If</h3>
+<div class="outline-text-3" id="text-org51b97e8">
 </div>
-<div id="outline-container-orge28aa11" class="outline-4">
-<h4 id="orge28aa11">Simple If</h4>
-<div class="outline-text-4" id="text-orge28aa11">
+<div id="outline-container-org9b8f1f0" class="outline-4">
+<h4 id="org9b8f1f0">Simple If</h4>
+<div class="outline-text-4" id="text-org9b8f1f0">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">result</span>=OK
 
@@ -523,9 +523,9 @@ It went well
 </pre>
 </div>
 </div>
-<div id="outline-container-org2419cad" class="outline-4">
-<h4 id="org2419cad">If..Else</h4>
-<div class="outline-text-4" id="text-org2419cad">
+<div id="outline-container-org3683b3b" class="outline-4">
+<h4 id="org3683b3b">If..Else</h4>
+<div class="outline-text-4" id="text-org3683b3b">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">result</span>=OOPS
 
@@ -542,9 +542,9 @@ Something went wrong
 </pre>
 </div>
 </div>
-<div id="outline-container-org6448f3e" class="outline-4">
-<h4 id="org6448f3e">If..Else if..Else</h4>
-<div class="outline-text-4" id="text-org6448f3e">
+<div id="outline-container-org773d3ed" class="outline-4">
+<h4 id="org773d3ed">If..Else if..Else</h4>
+<div class="outline-text-4" id="text-org773d3ed">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">result</span>=RETRY
 
@@ -570,9 +570,9 @@ else if in <b>Bash</b> is <code>elif</code>
 </div>
 </div>
 </div>
-<div id="outline-container-org832c212" class="outline-4">
-<h4 id="org832c212">if file exists</h4>
-<div class="outline-text-4" id="text-org832c212">
+<div id="outline-container-org278d199" class="outline-4">
+<h4 id="org278d199">if file exists</h4>
+<div class="outline-text-4" id="text-org278d199">
 <div class="org-src-container">
 <pre class="src src-shell">
 <span class="org-variable-name">f</span>=output/test.txt
@@ -600,9 +600,9 @@ This file is now created
 </pre>
 </div>
 </div>
-<div id="outline-container-org6461212" class="outline-4">
-<h4 id="org6461212">if directory exists</h4>
-<div class="outline-text-4" id="text-org6461212">
+<div id="outline-container-org61304d7" class="outline-4">
+<h4 id="org61304d7">if directory exists</h4>
+<div class="outline-text-4" id="text-org61304d7">
 <div class="org-src-container">
 <pre class="src src-shell">
 <span class="org-variable-name">f</span>=output/accounts
@@ -631,13 +631,13 @@ accounts directory exist
 </div>
 </div>
 </div>
-<div id="outline-container-org20f1623" class="outline-3">
-<h3 id="org20f1623">Conditional Operators</h3>
-<div class="outline-text-3" id="text-org20f1623">
+<div id="outline-container-org157979a" class="outline-3">
+<h3 id="org157979a">Conditional Operators</h3>
+<div class="outline-text-3" id="text-org157979a">
 </div>
-<div id="outline-container-org17f4bda" class="outline-4">
-<h4 id="org17f4bda">Example</h4>
-<div class="outline-text-4" id="text-org17f4bda">
+<div id="outline-container-org0e7ec8d" class="outline-4">
+<h4 id="org0e7ec8d">Example</h4>
+<div class="outline-text-4" id="text-org0e7ec8d">
 <div class="org-src-container">
 <pre class="src src-shell">
 <span class="org-variable-name">marks</span>=85
@@ -669,9 +669,9 @@ You can't apply for driver license yet
 </pre>
 </div>
 </div>
-<div id="outline-container-orgcb3f85d" class="outline-4">
-<h4 id="orgcb3f85d">List of Operators</h4>
-<div class="outline-text-4" id="text-orgcb3f85d">
+<div id="outline-container-org6a74c29" class="outline-4">
+<h4 id="org6a74c29">List of Operators</h4>
+<div class="outline-text-4" id="text-org6a74c29">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -722,9 +722,9 @@ You can't apply for driver license yet
 </div>
 </div>
 
-<div id="outline-container-orgcfec062" class="outline-3">
-<h3 id="orgcfec062">For loop</h3>
-<div class="outline-text-3" id="text-orgcfec062">
+<div id="outline-container-orga8dbbd5" class="outline-3">
+<h3 id="orga8dbbd5">For loop</h3>
+<div class="outline-text-3" id="text-orga8dbbd5">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-keyword">for</span> i<span class="org-keyword"> in</span> 1 2 3 4 5; <span class="org-keyword">do</span>
   <span class="org-builtin">echo</span> $<span class="org-variable-name">i</span>
@@ -853,17 +853,17 @@ You can't apply for driver license yet
 </div>
 </div>
 </div>
-<div id="outline-container-orge049d92" class="outline-2">
-<h2 id="orge049d92">Built-In Utilities</h2>
-<div class="outline-text-2" id="text-orge049d92">
+<div id="outline-container-org6add281" class="outline-2">
+<h2 id="org6add281">Built-In Utilities</h2>
+<div class="outline-text-2" id="text-org6add281">
 </div>
-<div id="outline-container-orgc548eae" class="outline-3">
-<h3 id="orgc548eae">Sequence generator</h3>
-<div class="outline-text-3" id="text-orgc548eae">
+<div id="outline-container-org79bc16c" class="outline-3">
+<h3 id="org79bc16c">Sequence generator</h3>
+<div class="outline-text-3" id="text-org79bc16c">
 </div>
-<div id="outline-container-org1a85aec" class="outline-4">
-<h4 id="org1a85aec">seq</h4>
-<div class="outline-text-4" id="text-org1a85aec">
+<div id="outline-container-org372b134" class="outline-4">
+<h4 id="org372b134">seq</h4>
+<div class="outline-text-4" id="text-org372b134">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-builtin">echo</span> <span class="org-sh-quoted-exec">`seq 5`</span>
 </pre>
@@ -874,9 +874,9 @@ You can't apply for driver license yet
 </pre>
 </div>
 </div>
-<div id="outline-container-org870474f" class="outline-4">
-<h4 id="org870474f">seq with fixed width</h4>
-<div class="outline-text-4" id="text-org870474f">
+<div id="outline-container-orgd03e2bc" class="outline-4">
+<h4 id="orgd03e2bc">seq with fixed width</h4>
+<div class="outline-text-4" id="text-orgd03e2bc">
 <p>
 This is useful to generate fixed length numbers. Will be padded with zeros to the largest number
 </p>
@@ -900,27 +900,27 @@ This is useful to generate fixed length numbers. Will be padded with zeros to th
 </div>
 </div>
 </div>
-<div id="outline-container-orgd426767" class="outline-3">
-<h3 id="orgd426767">Date</h3>
-<div class="outline-text-3" id="text-orgd426767">
+<div id="outline-container-org26d70b3" class="outline-3">
+<h3 id="org26d70b3">Date</h3>
+<div class="outline-text-3" id="text-org26d70b3">
 </div>
-<div id="outline-container-org7f154af" class="outline-4">
-<h4 id="org7f154af">Seconds since Epoch</h4>
-<div class="outline-text-4" id="text-org7f154af">
+<div id="outline-container-orga3dc71e" class="outline-4">
+<h4 id="orga3dc71e">Seconds since Epoch</h4>
+<div class="outline-text-4" id="text-orga3dc71e">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-builtin">echo</span> <span class="org-sh-quoted-exec">`date +%s`</span>
 </pre>
 </div>
 
 <pre class="example">
-1574817819
+1574818261
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org50de840" class="outline-4">
-<h4 id="org50de840">Time elapsed</h4>
-<div class="outline-text-4" id="text-org50de840">
+<div id="outline-container-org23c954e" class="outline-4">
+<h4 id="org23c954e">Time elapsed</h4>
+<div class="outline-text-4" id="text-org23c954e">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">startTime</span>=$(<span class="org-sh-quoted-exec">date</span> +%s)
 sleep 2
@@ -936,9 +936,9 @@ Was sleeping for 2
 </div>
 </div>
 
-<div id="outline-container-orge2ce470" class="outline-4">
-<h4 id="orge2ce470">Formatting time</h4>
-<div class="outline-text-4" id="text-orge2ce470">
+<div id="outline-container-orga4ab7fb" class="outline-4">
+<h4 id="orga4ab7fb">Formatting time</h4>
+<div class="outline-text-4" id="text-orga4ab7fb">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">currentTime</span>=$(<span class="org-sh-quoted-exec">date</span> +%s)
 
@@ -947,18 +947,18 @@ Was sleeping for 2
 </div>
 
 <pre class="example">
-Current Time:  01:23:41
+Current Time:  01:31:04
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org6667427" class="outline-3">
-<h3 id="org6667427">PID</h3>
-<div class="outline-text-3" id="text-org6667427">
+<div id="outline-container-org1bdedec" class="outline-3">
+<h3 id="org1bdedec">PID</h3>
+<div class="outline-text-3" id="text-org1bdedec">
 </div>
-<div id="outline-container-orgaf4aad0" class="outline-4">
-<h4 id="orgaf4aad0">PID of most recently executed background job</h4>
-<div class="outline-text-4" id="text-orgaf4aad0">
+<div id="outline-container-org9125d3e" class="outline-4">
+<h4 id="org9125d3e">PID of most recently executed background job</h4>
+<div class="outline-text-4" id="text-org9125d3e">
 <div class="org-src-container">
 <pre class="src src-shell">sleep 2 &amp;
 <span class="org-builtin">echo</span> $<span class="org-variable-name">!</span>
@@ -966,42 +966,113 @@ Current Time:  01:23:41
 </div>
 
 <pre class="example">
-2947
+3253
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1828c3e" class="outline-2">
-<h2 id="org1828c3e">External Utilities</h2>
-<div class="outline-text-2" id="text-org1828c3e">
+<div id="outline-container-org9e4071b" class="outline-2">
+<h2 id="org9e4071b">External Utilities</h2>
+<div class="outline-text-2" id="text-org9e4071b">
 </div>
-<div id="outline-container-orgd79dda8" class="outline-3">
-<h3 id="orgd79dda8">Curl</h3>
-<div class="outline-text-3" id="text-orgd79dda8">
+<div id="outline-container-org209759d" class="outline-3">
+<h3 id="org209759d">Curl</h3>
+<div class="outline-text-3" id="text-org209759d">
 </div>
-<div id="outline-container-org677b810" class="outline-4">
-<h4 id="org677b810">Ignore SSL</h4>
-<div class="outline-text-4" id="text-org677b810">
+<div id="outline-container-orgf60b18b" class="outline-4">
+<h4 id="orgf60b18b">Ignore SSL</h4>
+<div class="outline-text-4" id="text-orgf60b18b">
 <div class="org-src-container">
-<pre class="src src-shell">curl -k https://www.google.com 
+<pre class="src src-shell">curl -k https://yarchive.net
 </pre>
 </div>
 
-<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script nonce="tad9DljwT9flVpZvVAEUxQ==">(function(){window.google={kEI:'INDdXYPxCKvn5gLb9Y2wCQ',kEXPI:'0,18168,1335578,4439,1224,731,223,755,820,2082,1069,378,207,905,112,792,605,790,10,168,545,338,175,32,332,372,440,114,16,212,3,27,97,154,4,60,133,593,16,101,1129585,143,1197789,360,329118,1294,12383,4855,32692,15247,867,18544,3335,2,2,6801,364,3319,5505,8384,1119,2,578,728,2431,1362,4323,3700,1267,774,2247,1410,1413,1924,6,1140,9,1963,4211,1985,1719,1808,1976,2044,5766,1,3143,3191,2105,2016,38,920,873,1217,2975,2736,361,1197,1503,2,631,1142,2098,1814,2378,3254,622,2882,20,317,236,2937,975,1,368,2778,520,399,992,1285,8,570,2226,967,601,25,1167,112,390,1617,1,11,1,192,202,39,289,1252,840,324,193,317,825,277,47,8,48,158,4100,109,151,52,162,6,967,1,3,2669,789,1050,184,595,1325,377,686,1261,418,329,429,44,999,103,328,1284,16,84,336,81,2426,1639,96,511,474,207,6,247,879,29,719,534,505,3094,134,772,1548,524,7,728,89,502,1575,1917,1477,1345,769,5029,715,299,2533,257,215,367,111,473,457,1042,374,2084,1059,565,1060,4,281,419,142,1228,360,1134,370,1072,203,1380,174,268,559,653,40,441,404,405,99,2,433,66,442,1373,298,737,206,127,567,779,187,214,258,7,258,326,20,15,59,9,357,730,8,276,2,54,602,437,118,1339,653,6,408,161,65,423,443,1518,246,31,4,59,1,2,1,140,146,467,236,890,9,310,5865643,1805894,4194851,2799595,4,1572,549,333,444,1,2,80,1,900,896,1,8,1,2,2551,1,748,141,59,736,563,1,4265,1,1,1,1,3,7,128,229,100,4,2,3,15,3,1,1,6,2,2,27,8,11,31,3,5,11,5,9,11,5,19,3366422,18935796,1662866',authuser:0,kscs:'c9c918f0_INDdXYPxCKvn5gLb9Y2wCQ',kGL:'US',kBL:'Ljcm'};google.sn='webhp';google.kHL='en';google.jsfs='Ffpdje';})();(function(){google.lc=[];google.li=0;google.getEI=function(a){for(var b;a&&(!a.getAttribute||!(b=a.getAttribute("eid")));)a=a.parentNode;return b||google.kEI};google.getLEI=function(a){for(var b=null;a&&(!a.getAttribute||!(b=a.getAttribute("leid")));)a=a.parentNode;return b};google.https=function(){return"https:"==window.location.protocol};google.ml=function(){return null};google.time=function(){return(new Date).getTime()};google.log=function(a,b,e,c,g){if(a=google.logUrl(a,b,e,c,g)){b=new Image;var d=google.lc,f=google.li;d[f]=b;b.onerror=b.onload=b.onabort=function(){delete d[f]};google.vel&&google.vel.lu&&google.vel.lu(a);b.src=a;google.li=f+1}};google.logUrl=function(a,b,e,c,g){var d="",f=google.ls||"";e||-1!=b.search("&ei=")||(d="&ei="+google.getEI(c),-1==b.search("&lei=")&&(c=google.getLEI(c))&&(d+="&lei="+c));c="";!e&&google.cshid&&-1==b.search("&cshid=")&&"slh"!=a&&(c="&cshid="+google.cshid);a=e||"/"+(g||"gen_204")+"?atyp=i&ct="+a+"&cad="+b+d+f+"&zx="+google.time()+c;/^http:/i.test(a)&&google.https()&&(google.ml(Error("a"),!1,{src:a,glmm:1}),a="");return a};}).call(this);(function(){google.y={};google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};}).call(this);google.f={};var a=window.location,b=a.href.indexOf("#");if(0<=b){var c=a.href.substring(b+1);/(^|&)q=/.test(c)&&-1==c.indexOf("#")&&a.replace("/search?"+c.replace(/(^|&)fp=[^&]*/g,"")+"&cad=h")};</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
-</style><style>body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#36c}.q{color:#00c}.ts td{padding:0}.ts{border-collapse:collapse}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}a.gb1,a.gb2,a.gb3,a.gb4{color:#11c !important}body{background:#fff;color:black}a{color:#11c;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#36c}a:visited{color:#551a8b}a.gb1,a.gb4{text-decoration:underline}a.gb3:hover{text-decoration:none}#ghead a.gb2:hover{color:#fff !important}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#eee;border:solid 1px;border-color:#ccc #999 #999 #ccc;height:30px}.lsbb{display:block}.ftl,#fll a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#ccc}.lst:focus{outline:none}</style><script nonce="tad9DljwT9flVpZvVAEUxQ=="></script></head><body bgcolor="#fff"><script nonce="tad9DljwT9flVpZvVAEUxQ==">(function(){var src='/images/nav_logo229.png';var iesg=false;document.body.onload = function(){window.n && window.n();if (document.images){new Image().src=src;}
-if (!iesg){document.f&&document.f.q.focus();document.gbqf&&document.gbqf.q.focus();}
-}
-})();</script><div id="mngb"> <div id=gbar><nobr><b class=gb1>Search</b> <a class=gb1 href="https://www.google.com/imghp?hl=en&tab=wi">Images</a> <a class=gb1 href="https://maps.google.com/maps?hl=en&tab=wl">Maps</a> <a class=gb1 href="https://play.google.com/?hl=en&tab=w8">Play</a> <a class=gb1 href="https://www.youtube.com/?gl=US&tab=w1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=en&tab=wn">News</a> <a class=gb1 href="https://mail.google.com/mail/?tab=wm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=wo">Drive</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/en/about/products?tab=wh"><u>More</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a href="http://www.google.com/history/optout?hl=en" class=gb4>Web History</a> | <a  href="/preferences?hl=en" class=gb4>Settings</a> | <a target=_top id=gb_70 href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/" class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div> </div><center><br clear="all" id="lgpd"><div id="lga"><img alt="Google" height="92" src="/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png" style="padding:28px 0 14px" width="272" id="hplogo"><br><br></div><form action="/search" name="f"><table cellpadding="0" cellspacing="0"><tr valign="top"><td width="25%">&nbsp;</td><td align="center" nowrap=""><input name="ie" value="ISO-8859-1" type="hidden"><input value="en" name="hl" type="hidden"><input name="source" type="hidden" value="hp"><input name="biw" type="hidden"><input name="bih" type="hidden"><div class="ds" style="height:32px;margin:4px 0"><input class="lst" style="color:#000;margin:0;padding:5px 8px 0 6px;vertical-align:top" autocomplete="off" value="" title="Google Search" maxlength="2048" name="q" size="57"></div><br style="line-height:0"><span class="ds"><span class="lsbb"><input class="lsb" value="Google Search" name="btnG" type="submit"></span></span><span class="ds"><span class="lsbb"><input class="lsb" id="tsuid1" value="I'm Feeling Lucky" name="btnI" type="submit"><script nonce="tad9DljwT9flVpZvVAEUxQ==">(function(){var id='tsuid1';document.getElementById(id).onclick = function(){if (this.form.q.value){this.checked = 1;if (this.form.iflsig)this.form.iflsig.disabled = false;}
-else top.location='/doodles/';};})();</script><input value="AAP1E1EAAAAAXd3eMCfJJI1As7POtbDz8k_kzpL_3pqc" name="iflsig" type="hidden"></span></span></td><td class="fl sblc" align="left" nowrap="" width="25%"><a href="/advanced_search?hl=en&amp;authuser=0">Advanced search</a><a href="/language_tools?hl=en&amp;authuser=0">Language tools</a></td></tr></table><input id="gbv" name="gbv" type="hidden" value="1"><script nonce="tad9DljwT9flVpZvVAEUxQ==">(function(){var a,b="1";if(document&&document.getElementById)if("undefined"!=typeof XMLHttpRequest)b="2";else if("undefined"!=typeof ActiveXObject){var c,d,e=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"];for(c=0;d=e[c++];)try{new ActiveXObject(d),b="2"}catch(h){}}a=b;if("2"==a&&-1==location.search.indexOf("&gbv=2")){var f=google.gbvu,g=document.getElementById("gbv");g&&(g.value=a);f&&window.setTimeout(function(){location.href=f},0)};}).call(this);</script></form><div id="gac_scont"></div><div style="font-size:83%;min-height:3.5em"><br><div id="prm"><style>.szppmdbYutt__middle-slot-promo{font-size:small;margin-bottom:32px}.szppmdbYutt__middle-slot-promo a.ZIeIlb{display:inline-block;text-decoration:none}.szppmdbYutt__middle-slot-promo img{border:none;margin-right:5px;vertical-align:middle}</style><div class="szppmdbYutt__middle-slot-promo" data-ved="0ahUKEwiDgfrHnYnmAhWrs1kKHdt6A5YQnIcBCAQ"><a class="NKcBbd" href="https://www.google.com/url?q=https://artsandculture.google.com/exhibit/dALCm060VEPZJA%3Futm_source%3Dgoogle%26utm_medium%3Dhppromo%26utm_campaign%3Droute66&amp;source=hpp&amp;id=19014827&amp;ct=3&amp;usg=AFQjCNEIBbrxb6bXXDpzN9gV5nMog7RLRg&amp;sa=X&amp;ved=0ahUKEwiDgfrHnYnmAhWrs1kKHdt6A5YQ8IcBCAU" rel="nofollow">Take a journey across historic Route 66:</a><span> The Mother Road</span></div></div></div><span id="footer"><div style="font-size:10pt"><div style="margin:19px auto;text-align:center" id="fll"><a href="/intl/en/ads/">Advertising Programs</a><a href="/services/">Business Solutions</a><a href="/intl/en/about.html">About Google</a></div></div><p style="color:#767676;font-size:8pt">&copy; 2019 - <a href="/intl/en/policies/privacy/">Privacy</a> - <a href="/intl/en/policies/terms/">Terms</a></p></span></center><script nonce="tad9DljwT9flVpZvVAEUxQ==">(function(){window.google.cdo={height:0,width:0};(function(){var a=window.innerWidth,b=window.innerHeight;if(!a||!b){var c=window.document,d="CSS1Compat"==c.compatMode?c.documentElement:c.body;a=d.clientWidth;b=d.clientHeight}a&&b&&(a!=google.cdo.width||b!=google.cdo.height)&&google.log("","","/client_204?&atyp=i&biw="+a+"&bih="+b+"&ei="+google.kEI);}).call(this);})();(function(){var u='/xjs/_/js/k\x3dxjs.hp.en_US.pTaYn-LSac8.O/m\x3dsb_he,d/am\x3dwEBgIw/d\x3d1/rs\x3dACT90oGkjxbT-ZjCYHnRQhvJ1ZklnCIKdA';setTimeout(function(){var a=document.createElement("script");a.src=u;google.timers&&google.timers.load&&google.tick&&google.tick("load","xjsls");document.body.appendChild(a)},0);})();(function(){window.google.xjsu='/xjs/_/js/k\x3dxjs.hp.en_US.pTaYn-LSac8.O/m\x3dsb_he,d/am\x3dwEBgIw/d\x3d1/rs\x3dACT90oGkjxbT-ZjCYHnRQhvJ1ZklnCIKdA';})();function _DumpException(e){throw e;}
-function _F_installCss(c){}
-(function(){google.spjs=false;google.snet=true;google.em=[];google.emw=false;})();(function(){var pmc='{\x22d\x22:{},\x22sb_he\x22:{\x22agen\x22:true,\x22cgen\x22:true,\x22client\x22:\x22heirloom-hp\x22,\x22dh\x22:true,\x22dhqt\x22:true,\x22ds\x22:\x22\x22,\x22ffql\x22:\x22en\x22,\x22fl\x22:true,\x22host\x22:\x22google.com\x22,\x22isbh\x22:28,\x22jsonp\x22:true,\x22msgs\x22:{\x22cibl\x22:\x22Clear Search\x22,\x22dym\x22:\x22Did you mean:\x22,\x22lcky\x22:\x22I\\u0026#39;m Feeling Lucky\x22,\x22lml\x22:\x22Learn more\x22,\x22oskt\x22:\x22Input tools\x22,\x22psrc\x22:\x22This search was removed from your \\u003Ca href\x3d\\\x22/history\\\x22\\u003EWeb History\\u003C/a\\u003E\x22,\x22psrl\x22:\x22Remove\x22,\x22sbit\x22:\x22Search by image\x22,\x22srch\x22:\x22Google Search\x22},\x22ovr\x22:{},\x22pq\x22:\x22\x22,\x22refpd\x22:true,\x22rfs\x22:[],\x22sbpl\x22:24,\x22sbpr\x22:24,\x22scd\x22:10,\x22sce\x22:5,\x22stok\x22:\x22020DBnltm8PfbpTY1PPpqXbyYL4\x22,\x22uhde\x22:false}}';google.pmc=JSON.parse(pmc);})();</script>        </body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Yarchive </title>
+<style type="text/css">
+	.center { text-align: center; }
+</style>
+</head>
+<body>
+<H1 class="center">Usenet Archives</H1>
+
+<p class="center">
+collected by Norman Yarvin
+</p>
+
+<hr>
+
+<ul>
+<li><a href="ac/index.html">		Air Conditioning</a>
+<li><a href="air/index.html">		Aircraft</a>
+<li><a href="bike/index.html">		Bicycles</a>
+<li><a href="car/index.html">		Cars</a>
+<li><a href="chem/index.html">		Chemistry</a>
+<li><a href="comp/index.html">		Computers</a>
+<li><a href="electr/index.html">	Electrical, Electronic</a>
+<li><a href="env/index.html">		Environment</a>
+<li><a href="explosives/index.html">	Explosives, Pyrotechnics</a>
+<li><a href="food/index.html">		Food</a>
+<li><a href="house/index.html">		Houses</a>
+<li><a href="gun/index.html">		Guns</a>
+<li><a href="jokes/index.html">		Jokes</a>
+<li><a href="med/index.html">		Medicine</a>
+<li><a href="metal/index.html">		Metalworking</a>
+<li><a href="mil/index.html">		Military</a>
+<li><a href="nuke/index.html">		Nuclear</a>
+<li><a href="phone/index.html">		Telephones</a>
+<li><a href="physics/index.html">	Physics</a>
+<li><a href="risks/index.html">		Risks</a>
+<li><a href="security/index.html">	Security</a>
+<li><a href="space/index.html">		Space</a>
+</ul>
+
+<hr>
+
+<ul>
+<li><a href="changelog_1.html">	Update 1 </a> (May 20, 2003)
+<li><a href="changelog_2.html">	Update 2 </a> (May 25, 2005)
+<li><a href="changelog_3.html">	Update 3 </a> (Jan 12, 2006)
+<li><a href="changelog_4.html">	Update 4 </a> (Oct 21, 2008)
+<li><a href="changelog_5.html">	Update 5 </a> (April 26, 2011)
+</ul>
+
+<hr>
+
+<br><a href="ed/index.html">		Editorials</a>
+
+<br><a href="macaulay">			Macaulay</a>
+
+<br><a href="downloads">		Downloads</a>
+
+<br><a href="about.html">		About this site</a>
+
+<hr>
+
+<a href="blog/index.html">		Blog</a>
+
+<hr>
+
+<form method="get" action="http://www.google.com/search" name="f">
+	Search this website, via Google, for:
+	<input value="" name="as_q" size="30" type="text">
+	<input type="hidden" name="as_sitesearch" value="yarchive.net">
+	<input type="submit" name="sa" value="Search">
+</form>
+
+</body>
+</html>
 </div>
 </div>
-<div id="outline-container-org6c42840" class="outline-4">
-<h4 id="org6c42840">Get HTTP Status code</h4>
-<div class="outline-text-4" id="text-org6c42840">
+<div id="outline-container-orgfdf548f" class="outline-4">
+<h4 id="orgfdf548f">Get HTTP Status code</h4>
+<div class="outline-text-4" id="text-orgfdf548f">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">response</span>=$(<span class="org-sh-quoted-exec">curl</span> -k -m 1 --write-out %{http_code} --silent --output /dev/null https://www.google.com )
 
@@ -1015,13 +1086,13 @@ function _F_installCss(c){}
 </div>
 </div>
 </div>
-<div id="outline-container-org8ab4ccc" class="outline-3">
-<h3 id="org8ab4ccc">SED</h3>
-<div class="outline-text-3" id="text-org8ab4ccc">
+<div id="outline-container-org9294979" class="outline-3">
+<h3 id="org9294979">SED</h3>
+<div class="outline-text-3" id="text-org9294979">
 </div>
-<div id="outline-container-org351ce23" class="outline-4">
-<h4 id="org351ce23">Replace String</h4>
-<div class="outline-text-4" id="text-org351ce23">
+<div id="outline-container-orgdb1a75b" class="outline-4">
+<h4 id="orgdb1a75b">Replace String</h4>
+<div class="outline-text-4" id="text-orgdb1a75b">
 <div class="org-src-container">
 <pre class="src src-shell">cat input/application.properties
 </pre>
@@ -1049,17 +1120,17 @@ application_name=JEDI
 </div>
 </div>
 
-<div id="outline-container-org413adf7" class="outline-3">
-<h3 id="org413adf7">JQ</h3>
+<div id="outline-container-orga075ad4" class="outline-3">
+<h3 id="orga075ad4">JQ</h3>
 </div>
-<div id="outline-container-org8ef447c" class="outline-3">
-<h3 id="org8ef447c">XARGS</h3>
+<div id="outline-container-org68de418" class="outline-3">
+<h3 id="org68de418">XARGS</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Dhyan Raj</p>
-<p class="date">Created: 2019-11-26 Tue 20:23</p>
+<p class="date">Created: 2019-11-26 Tue 20:31</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
