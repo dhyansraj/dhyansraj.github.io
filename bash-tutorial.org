@@ -98,6 +98,71 @@ echo We are using ${aa[shell]} in this example
 We are using Bash in this example
 #+end_example
 
+* Bash Script parameters
+** Passing parameters to Bash scripts
+It is possible to pass multiple parameters to a Bash script. The parameters are accessible inside script as $1, $2, $3 etc. 
+#+begin_src shell :results verbatim
+cat lib/bash_parameters_test_1.sh 
+#+end_src
+
+#+RESULTS:
+#+begin_example
+#!/bin/bash
+
+echo First Parameter $1
+echo Second Parameter $2
+echo Third Parameter $3
+#+end_example
+
+#+begin_src shell :results verbatim
+lib/bash_parameters_test_1.sh Hello World
+#+end_src
+
+#+RESULTS:
+#+begin_example
+First Parameter Hello
+Second Parameter World
+Third Parameter
+#+end_example
+
+#+begin_note
+Use $0 to access the name of the script
+#+end_note
+
+** Accessing all parameters
+Use $@ to access all parameters
+#+begin_src shell :results verbatim
+cat lib/bash_parameters_test_2.sh 
+#+end_src
+
+#+RESULTS:
+#+begin_example
+#!/bin/bash
+
+echo All Parameters passed to this script are $@
+#+end_example
+
+#+begin_src shell :results verbatim
+lib/bash_parameters_test_2.sh We can send many parameters to bash script and access them using '$@'
+#+end_src
+
+#+RESULTS:
+#+begin_example
+All Parameters passed to this script are We can send many parameters to bash script and access them using $@
+#+end_example
+
+#+begin_note
+Use $@ in for loop to iterate through each parameter
+
+#+begin_src shell
+for i in $@; do
+    echo $i
+done
+
+#+end_src
+#+end_note
+
+
 * Control Statements
 ** If 
 *** Simple If
