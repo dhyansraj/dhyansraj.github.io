@@ -89,13 +89,14 @@ is simple
 #+begin_src shell
 declare -A aa
 aa[shell]=Bash
+aa[editor]=Emacs
 
-echo We are using ${aa[shell]} in this example
+echo We are using ${aa[shell]} in this tutorial and is generated with ${aa[editor]}
 #+end_src
 
 #+RESULTS:
 #+begin_example
-We are using Bash in this example
+We are using Bash in this tutorial and is generated with Emacs
 #+end_example
 
 * Bash Script parameters
