@@ -74,6 +74,7 @@ echo $i
 
 * Arrays
 ** Single Dimensional Arrays
+*** Declaration 
 #+begin_src shell :results verbatim
 arr=(Bash "is simple" yet powerful )
 echo ${arr[0]}
@@ -85,6 +86,19 @@ echo ${arr[1]}
 Bash
 is simple
 #+end_example
+*** Array Length
+#+begin_src shell :results verbatim
+
+arr=(Bash "is simple" yet powerful )
+
+echo "arr has "${#arr[@]}" elements"
+#+end_src
+
+#+RESULTS:
+#+begin_example
+arr has 4 elements
+#+end_example
+
 ** Multi Dimensional Arrays
 #+begin_src shell
 declare -A aa
