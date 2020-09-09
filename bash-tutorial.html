@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-02-19 Wed 23:42 -->
+<!-- 2020-09-09 Wed 09:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Bash Tutorial</title>
@@ -258,130 +258,144 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga584e06">Introduction</a>
+<li><a href="#org0cc0946">Introduction</a>
 <ul>
-<li><a href="#org638b980">Background</a></li>
+<li><a href="#org785090b">Background</a></li>
 </ul>
 </li>
-<li><a href="#orgd744912">Variables</a>
+<li><a href="#org61de347">Variables</a>
 <ul>
-<li><a href="#orgb92122f">Simple usage</a></li>
-<li><a href="#orgf5dad23">Inline usage</a></li>
-<li><a href="#orgbe4f75a">Arithmetic Operations on variables</a></li>
-<li><a href="#orge38cca4">Increment variable</a></li>
+<li><a href="#org1f81af3">Simple usage</a></li>
+<li><a href="#org3bdf0a5">Inline usage</a></li>
+<li><a href="#org7526ff4">Arithmetic Operations on variables</a></li>
+<li><a href="#org265d202">Increment variable</a></li>
 </ul>
 </li>
-<li><a href="#org00e1c33">Arrays</a>
+<li><a href="#org12888ba">Arrays</a>
 <ul>
-<li><a href="#orgc3025e1">Single Dimensional Arrays</a>
+<li><a href="#org5e052b5">Single Dimensional Arrays</a>
 <ul>
-<li><a href="#org2dfa451">Declaration</a></li>
-<li><a href="#orgd7dfedb">Array Length</a></li>
+<li><a href="#org9e96ae0">Declaration</a></li>
+<li><a href="#org4fd0f41">Array Length</a></li>
 </ul>
 </li>
-<li><a href="#org94e5821">Multi Dimensional Arrays</a></li>
+<li><a href="#org34cd659">Multi Dimensional Arrays</a></li>
 </ul>
 </li>
-<li><a href="#orgfa21378">Bash Script parameters</a>
+<li><a href="#org2fd368c">Bash Script parameters</a>
 <ul>
-<li><a href="#orgb10565d">Passing parameters to Bash scripts</a></li>
-<li><a href="#org789eace">Accessing all parameters</a></li>
+<li><a href="#orgddce107">Passing parameters to Bash scripts</a></li>
+<li><a href="#orge464d6a">Accessing all parameters</a></li>
 </ul>
 </li>
-<li><a href="#org369d3a0">Control Statements</a>
+<li><a href="#orge183b48">Control Statements</a>
 <ul>
-<li><a href="#org3486acc">If</a>
+<li><a href="#org3ae988f">If</a>
 <ul>
-<li><a href="#org7a8f40a">Simple If</a></li>
-<li><a href="#org461f420">If..Else</a></li>
-<li><a href="#orgc6deda0">If..Else if..Else</a></li>
-<li><a href="#orgca3851d">if file exists</a></li>
-<li><a href="#orgca39177">if directory exists</a></li>
+<li><a href="#orgc6835ae">Simple If</a></li>
+<li><a href="#orgbee6976">If..Else</a></li>
+<li><a href="#orga3f9eb9">If..Else if..Else</a></li>
+<li><a href="#orgb5e17d2">if file exists</a></li>
+<li><a href="#org2559487">if directory exists</a></li>
 </ul>
 </li>
-<li><a href="#orga7fabd7">Conditional Operators</a>
+<li><a href="#org85b3e4b">Conditional Operators</a>
 <ul>
-<li><a href="#orgea87218">Example</a></li>
-<li><a href="#org111cf3c">List of Operators</a></li>
+<li><a href="#orgc887cc4">Example</a></li>
+<li><a href="#org8917c9b">List of Operators</a></li>
 </ul>
 </li>
-<li><a href="#orgac12381">For loop</a></li>
+<li><a href="#org26b87b7">For loop</a></li>
 </ul>
 </li>
-<li><a href="#org9afe673">Functions</a>
+<li><a href="#org54a1e6b">Functions</a>
 <ul>
-<li><a href="#org1abd3ad">Simple Function Declarations</a></li>
-<li><a href="#org06b9818">Function calls</a></li>
-<li><a href="#orgac4a420">Function calls with parameters</a></li>
+<li><a href="#org88dc888">Simple Function Declarations</a></li>
+<li><a href="#orgcbec5af">Function calls</a></li>
+<li><a href="#orga6fb347">Function calls with parameters</a></li>
 </ul>
 </li>
-<li><a href="#org2aeef19">Built-In Utilities</a>
+<li><a href="#org8f46471">Built-In Utilities</a>
 <ul>
-<li><a href="#org07b2d6a">Sequence generator</a>
+<li><a href="#orge63134f">Sequence generator</a>
 <ul>
-<li><a href="#orge4cc260">seq</a></li>
-<li><a href="#org88e4629">seq with fixed width</a></li>
-<li><a href="#orgfcd9eeb">Looping with seq</a></li>
-<li><a href="#org91eec44">Looping with seq and interval</a></li>
-<li><a href="#orgbed3688">Multi-Loops with seq and interval</a></li>
+<li><a href="#org9323f9c">seq</a></li>
+<li><a href="#org5029b66">seq with fixed width</a></li>
+<li><a href="#orgf96bb4d">Looping with seq</a></li>
+<li><a href="#org48a7847">Looping with seq and interval</a></li>
+<li><a href="#org8ed9bfb">Multi-Loops with seq and interval</a></li>
 </ul>
 </li>
-<li><a href="#orgf1c766f">Date</a>
+<li><a href="#orgdc57972">Regular Expression</a>
 <ul>
-<li><a href="#orgc2bda0e">Seconds since Epoch</a></li>
-<li><a href="#orgfc3f065">Time elapsed</a></li>
-<li><a href="#orgabebf0a">Formatting time</a></li>
+<li><a href="#org61ac4ee">Simple match</a></li>
+<li><a href="#org9ee9a2d">Starts with</a></li>
 </ul>
 </li>
-<li><a href="#orgdc23c78">PID</a>
+<li><a href="#org8d2dd94">Date</a>
 <ul>
-<li><a href="#org4bb8ba0">PID of most recently executed background job</a></li>
+<li><a href="#org6ced79c">Seconds since Epoch</a></li>
+<li><a href="#orgf48bb15">Time elapsed</a></li>
+<li><a href="#org8547cb5">Formatting time</a></li>
+</ul>
+</li>
+<li><a href="#orgc260d5e">PID</a>
+<ul>
+<li><a href="#org31c6b86">PID of most recently executed background job</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org05fc675">External Utilities</a>
+<li><a href="#org5eb99fe">External Utilities</a>
 <ul>
-<li><a href="#org98aa1de">Curl</a>
+<li><a href="#org01ac34f">Curl</a>
 <ul>
-<li><a href="#orgc8cbe47">Ignore SSL</a></li>
-<li><a href="#orge9c5ced">Get HTTP Status code</a></li>
+<li><a href="#org627be29">Ignore SSL</a></li>
+<li><a href="#org9c51d49">Get HTTP Status code</a></li>
 </ul>
 </li>
-<li><a href="#org53d2cd7">SED</a>
+<li><a href="#org55b3ca2">SED</a>
 <ul>
-<li><a href="#orgeaf821f">Replace String</a></li>
+<li><a href="#orgf68cc2f">Replace String</a></li>
 </ul>
 </li>
-<li><a href="#org4c7c3e7">JQ</a></li>
-<li><a href="#orgd9e099a">XARGS</a></li>
-<li><a href="#org5a227c5">TEE</a></li>
+<li><a href="#org9d4cdcf">JQ</a></li>
+<li><a href="#org92933c2">XARGS</a></li>
+<li><a href="#org8b22999">TEE</a></li>
+</ul>
+</li>
+<li><a href="#org7844948">Worksheet</a>
+<ul>
+<li><a href="#org37c2d61">AWK Parsing file with variable</a></li>
+<li><a href="#orgdbe06ea">Kuberentes Pod status checking</a></li>
+<li><a href="#org1a12783">Regex</a></li>
+<li><a href="#org05b6ba3">Bitwise operator</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga584e06" class="outline-2">
-<h2 id="orga584e06">Introduction</h2>
-<div class="outline-text-2" id="text-orga584e06">
+<div id="outline-container-org0cc0946" class="outline-2">
+<h2 id="org0cc0946">Introduction</h2>
+<div class="outline-text-2" id="text-org0cc0946">
 </div>
-<div id="outline-container-org638b980" class="outline-3">
-<h3 id="org638b980">Background</h3>
-<div class="outline-text-3" id="text-org638b980">
+<div id="outline-container-org785090b" class="outline-3">
+<h3 id="org785090b">Background</h3>
+<div class="outline-text-3" id="text-org785090b">
 <p>
 <b>GNU Bash</b> or simply <b>Bash</b> is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. Bash has many high-level language. Along with other powerful Linux tools and external programs, we can write very capable programs in Bash script.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd744912" class="outline-2">
-<h2 id="orgd744912">Variables</h2>
-<div class="outline-text-2" id="text-orgd744912">
+<div id="outline-container-org61de347" class="outline-2">
+<h2 id="org61de347">Variables</h2>
+<div class="outline-text-2" id="text-org61de347">
 </div>
-<div id="outline-container-orgb92122f" class="outline-3">
-<h3 id="orgb92122f">Simple usage</h3>
-<div class="outline-text-3" id="text-orgb92122f">
+<div id="outline-container-org1f81af3" class="outline-3">
+<h3 id="org1f81af3">Simple usage</h3>
+<div class="outline-text-3" id="text-org1f81af3">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">name</span>=Dhyan
 <span class="org-variable-name">age</span>=39
@@ -395,9 +409,9 @@ Hello Dhyan, you dont look like 39
 </pre>
 </div>
 </div>
-<div id="outline-container-orgf5dad23" class="outline-3">
-<h3 id="orgf5dad23">Inline usage</h3>
-<div class="outline-text-3" id="text-orgf5dad23">
+<div id="outline-container-org3bdf0a5" class="outline-3">
+<h3 id="org3bdf0a5">Inline usage</h3>
+<div class="outline-text-3" id="text-org3bdf0a5">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">i</span>=10
 
@@ -412,9 +426,9 @@ The code is e10b
 </pre>
 </div>
 </div>
-<div id="outline-container-orgbe4f75a" class="outline-3">
-<h3 id="orgbe4f75a">Arithmetic Operations on variables</h3>
-<div class="outline-text-3" id="text-orgbe4f75a">
+<div id="outline-container-org7526ff4" class="outline-3">
+<h3 id="org7526ff4">Arithmetic Operations on variables</h3>
+<div class="outline-text-3" id="text-org7526ff4">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">a</span>=1
 <span class="org-variable-name">b</span>=2
@@ -428,9 +442,9 @@ The code is e10b
 </pre>
 </div>
 </div>
-<div id="outline-container-orge38cca4" class="outline-3">
-<h3 id="orge38cca4">Increment variable</h3>
-<div class="outline-text-3" id="text-orge38cca4">
+<div id="outline-container-org265d202" class="outline-3">
+<h3 id="org265d202">Increment variable</h3>
+<div class="outline-text-3" id="text-org265d202">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">i</span>=1
 
@@ -469,17 +483,17 @@ The code is e10b
 </div>
 </div>
 
-<div id="outline-container-org00e1c33" class="outline-2">
-<h2 id="org00e1c33">Arrays</h2>
-<div class="outline-text-2" id="text-org00e1c33">
+<div id="outline-container-org12888ba" class="outline-2">
+<h2 id="org12888ba">Arrays</h2>
+<div class="outline-text-2" id="text-org12888ba">
 </div>
-<div id="outline-container-orgc3025e1" class="outline-3">
-<h3 id="orgc3025e1">Single Dimensional Arrays</h3>
-<div class="outline-text-3" id="text-orgc3025e1">
+<div id="outline-container-org5e052b5" class="outline-3">
+<h3 id="org5e052b5">Single Dimensional Arrays</h3>
+<div class="outline-text-3" id="text-org5e052b5">
 </div>
-<div id="outline-container-org2dfa451" class="outline-4">
-<h4 id="org2dfa451">Declaration</h4>
-<div class="outline-text-4" id="text-org2dfa451">
+<div id="outline-container-org9e96ae0" class="outline-4">
+<h4 id="org9e96ae0">Declaration</h4>
+<div class="outline-text-4" id="text-org9e96ae0">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">arr</span>=(Bash <span class="org-string">"is simple"</span> yet powerful )
 <span class="org-builtin">echo</span> ${<span class="org-variable-name">arr</span>[0]}
@@ -493,9 +507,9 @@ is simple
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd7dfedb" class="outline-4">
-<h4 id="orgd7dfedb">Array Length</h4>
-<div class="outline-text-4" id="text-orgd7dfedb">
+<div id="outline-container-org4fd0f41" class="outline-4">
+<h4 id="org4fd0f41">Array Length</h4>
+<div class="outline-text-4" id="text-org4fd0f41">
 <div class="org-src-container">
 <pre class="src src-shell">
 <span class="org-variable-name">arr</span>=(Bash <span class="org-string">"is simple"</span> yet powerful )
@@ -511,9 +525,9 @@ arr has 4 elements
 </div>
 </div>
 
-<div id="outline-container-org94e5821" class="outline-3">
-<h3 id="org94e5821">Multi Dimensional Arrays</h3>
-<div class="outline-text-3" id="text-org94e5821">
+<div id="outline-container-org34cd659" class="outline-3">
+<h3 id="org34cd659">Multi Dimensional Arrays</h3>
+<div class="outline-text-3" id="text-org34cd659">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-builtin">declare</span> -A aa
 <span class="org-variable-name">aa</span>[shell]=Bash
@@ -530,13 +544,13 @@ We are using Bash in this tutorial and is generated with Emacs
 </div>
 </div>
 
-<div id="outline-container-orgfa21378" class="outline-2">
-<h2 id="orgfa21378">Bash Script parameters</h2>
-<div class="outline-text-2" id="text-orgfa21378">
+<div id="outline-container-org2fd368c" class="outline-2">
+<h2 id="org2fd368c">Bash Script parameters</h2>
+<div class="outline-text-2" id="text-org2fd368c">
 </div>
-<div id="outline-container-orgb10565d" class="outline-3">
-<h3 id="orgb10565d">Passing parameters to Bash scripts</h3>
-<div class="outline-text-3" id="text-orgb10565d">
+<div id="outline-container-orgddce107" class="outline-3">
+<h3 id="orgddce107">Passing parameters to Bash scripts</h3>
+<div class="outline-text-3" id="text-orgddce107">
 <p>
 It is possible to pass multiple parameters to a Bash script. The parameters are accessible inside script as $1, $2, $3 etc. 
 </p>
@@ -573,9 +587,9 @@ Use $0 to access the name of the script
 </div>
 </div>
 
-<div id="outline-container-org789eace" class="outline-3">
-<h3 id="org789eace">Accessing all parameters</h3>
-<div class="outline-text-3" id="text-org789eace">
+<div id="outline-container-orge464d6a" class="outline-3">
+<h3 id="orge464d6a">Accessing all parameters</h3>
+<div class="outline-text-3" id="text-orge464d6a">
 <p>
 Use $@ to access all parameters
 </p>
@@ -617,18 +631,17 @@ Use $@ in for loop to iterate through each parameter
 </div>
 </div>
 
-
-<div id="outline-container-org369d3a0" class="outline-2">
-<h2 id="org369d3a0">Control Statements</h2>
-<div class="outline-text-2" id="text-org369d3a0">
+<div id="outline-container-orge183b48" class="outline-2">
+<h2 id="orge183b48">Control Statements</h2>
+<div class="outline-text-2" id="text-orge183b48">
 </div>
-<div id="outline-container-org3486acc" class="outline-3">
-<h3 id="org3486acc">If</h3>
-<div class="outline-text-3" id="text-org3486acc">
+<div id="outline-container-org3ae988f" class="outline-3">
+<h3 id="org3ae988f">If</h3>
+<div class="outline-text-3" id="text-org3ae988f">
 </div>
-<div id="outline-container-org7a8f40a" class="outline-4">
-<h4 id="org7a8f40a">Simple If</h4>
-<div class="outline-text-4" id="text-org7a8f40a">
+<div id="outline-container-orgc6835ae" class="outline-4">
+<h4 id="orgc6835ae">Simple If</h4>
+<div class="outline-text-4" id="text-orgc6835ae">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">result</span>=OK
 
@@ -656,9 +669,9 @@ It went well
 </pre>
 </div>
 </div>
-<div id="outline-container-org461f420" class="outline-4">
-<h4 id="org461f420">If..Else</h4>
-<div class="outline-text-4" id="text-org461f420">
+<div id="outline-container-orgbee6976" class="outline-4">
+<h4 id="orgbee6976">If..Else</h4>
+<div class="outline-text-4" id="text-orgbee6976">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">result</span>=OOPS
 
@@ -675,9 +688,9 @@ Something went wrong
 </pre>
 </div>
 </div>
-<div id="outline-container-orgc6deda0" class="outline-4">
-<h4 id="orgc6deda0">If..Else if..Else</h4>
-<div class="outline-text-4" id="text-orgc6deda0">
+<div id="outline-container-orga3f9eb9" class="outline-4">
+<h4 id="orga3f9eb9">If..Else if..Else</h4>
+<div class="outline-text-4" id="text-orga3f9eb9">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">result</span>=RETRY
 
@@ -703,9 +716,9 @@ else if in <b>Bash</b> is <code>elif</code>
 </div>
 </div>
 </div>
-<div id="outline-container-orgca3851d" class="outline-4">
-<h4 id="orgca3851d">if file exists</h4>
-<div class="outline-text-4" id="text-orgca3851d">
+<div id="outline-container-orgb5e17d2" class="outline-4">
+<h4 id="orgb5e17d2">if file exists</h4>
+<div class="outline-text-4" id="text-orgb5e17d2">
 <div class="org-src-container">
 <pre class="src src-shell">
 <span class="org-variable-name">f</span>=output/test.txt
@@ -733,9 +746,9 @@ This file is now created
 </pre>
 </div>
 </div>
-<div id="outline-container-orgca39177" class="outline-4">
-<h4 id="orgca39177">if directory exists</h4>
-<div class="outline-text-4" id="text-orgca39177">
+<div id="outline-container-org2559487" class="outline-4">
+<h4 id="org2559487">if directory exists</h4>
+<div class="outline-text-4" id="text-org2559487">
 <div class="org-src-container">
 <pre class="src src-shell">
 <span class="org-variable-name">f</span>=output/accounts
@@ -764,13 +777,13 @@ accounts directory exist
 </div>
 </div>
 </div>
-<div id="outline-container-orga7fabd7" class="outline-3">
-<h3 id="orga7fabd7">Conditional Operators</h3>
-<div class="outline-text-3" id="text-orga7fabd7">
+<div id="outline-container-org85b3e4b" class="outline-3">
+<h3 id="org85b3e4b">Conditional Operators</h3>
+<div class="outline-text-3" id="text-org85b3e4b">
 </div>
-<div id="outline-container-orgea87218" class="outline-4">
-<h4 id="orgea87218">Example</h4>
-<div class="outline-text-4" id="text-orgea87218">
+<div id="outline-container-orgc887cc4" class="outline-4">
+<h4 id="orgc887cc4">Example</h4>
+<div class="outline-text-4" id="text-orgc887cc4">
 <div class="org-src-container">
 <pre class="src src-shell">
 <span class="org-variable-name">marks</span>=85
@@ -802,9 +815,9 @@ You can't apply for driver license yet
 </pre>
 </div>
 </div>
-<div id="outline-container-org111cf3c" class="outline-4">
-<h4 id="org111cf3c">List of Operators</h4>
-<div class="outline-text-4" id="text-org111cf3c">
+<div id="outline-container-org8917c9b" class="outline-4">
+<h4 id="org8917c9b">List of Operators</h4>
+<div class="outline-text-4" id="text-org8917c9b">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -855,9 +868,9 @@ You can't apply for driver license yet
 </div>
 </div>
 
-<div id="outline-container-orgac12381" class="outline-3">
-<h3 id="orgac12381">For loop</h3>
-<div class="outline-text-3" id="text-orgac12381">
+<div id="outline-container-org26b87b7" class="outline-3">
+<h3 id="org26b87b7">For loop</h3>
+<div class="outline-text-3" id="text-org26b87b7">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-keyword">for</span> i<span class="org-keyword"> in</span> 1 2 3 4 5; <span class="org-keyword">do</span>
   <span class="org-builtin">echo</span> $<span class="org-variable-name">i</span>
@@ -983,19 +996,23 @@ You can't apply for driver license yet
 </tr>
 </tbody>
 </table>
+
+<p>
+You can also use <a href="#orge63134f">Sequence generator</a> in conjunction with for loops.
+</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org9afe673" class="outline-2">
-<h2 id="org9afe673">Functions</h2>
-<div class="outline-text-2" id="text-org9afe673">
+<div id="outline-container-org54a1e6b" class="outline-2">
+<h2 id="org54a1e6b">Functions</h2>
+<div class="outline-text-2" id="text-org54a1e6b">
 <p>
 Although statements can be written one after another, it would be ideal to group statements into functions or files for understand-ability and manageability. Multiple statements can be grouped in Bash script using the keyword <b><i>function</i></b>. Functions can be called with parameters as well. 
 </p>
 </div>
-<div id="outline-container-org1abd3ad" class="outline-3">
-<h3 id="org1abd3ad">Simple Function Declarations</h3>
-<div class="outline-text-3" id="text-org1abd3ad">
+<div id="outline-container-org88dc888" class="outline-3">
+<h3 id="org88dc888">Simple Function Declarations</h3>
+<div class="outline-text-3" id="text-org88dc888">
 <p>
 Statements are executed in the order they are written, but function declarations are not executed unless they are invoked explicitly from other statements.
 </p>
@@ -1016,9 +1033,9 @@ Above statement if executed produces no output since the function aFunction is n
 </div>
 </div>
 
-<div id="outline-container-org06b9818" class="outline-3">
-<h3 id="org06b9818">Function calls</h3>
-<div class="outline-text-3" id="text-org06b9818">
+<div id="outline-container-orgcbec5af" class="outline-3">
+<h3 id="orgcbec5af">Function calls</h3>
+<div class="outline-text-3" id="text-orgcbec5af">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-keyword">function</span> <span class="org-function-name">aFunction</span>() {
     <span class="org-builtin">echo</span> <span class="org-string">"aFunction is called"</span>
@@ -1034,9 +1051,9 @@ aFunction is called
 </div>
 </div>
 
-<div id="outline-container-orgac4a420" class="outline-3">
-<h3 id="orgac4a420">Function calls with parameters</h3>
-<div class="outline-text-3" id="text-orgac4a420">
+<div id="outline-container-orga6fb347" class="outline-3">
+<h3 id="orga6fb347">Function calls with parameters</h3>
+<div class="outline-text-3" id="text-orga6fb347">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-keyword">function</span> <span class="org-function-name">happyNewYear</span>() {
     <span class="org-variable-name">a</span>=$<span class="org-variable-name">1</span>
@@ -1055,17 +1072,17 @@ Hello Dhyan, Welcome to 2020
 </div>
 </div>
 
-<div id="outline-container-org2aeef19" class="outline-2">
-<h2 id="org2aeef19">Built-In Utilities</h2>
-<div class="outline-text-2" id="text-org2aeef19">
+<div id="outline-container-org8f46471" class="outline-2">
+<h2 id="org8f46471">Built-In Utilities</h2>
+<div class="outline-text-2" id="text-org8f46471">
 </div>
-<div id="outline-container-org07b2d6a" class="outline-3">
-<h3 id="org07b2d6a">Sequence generator</h3>
-<div class="outline-text-3" id="text-org07b2d6a">
+<div id="outline-container-orge63134f" class="outline-3">
+<h3 id="orge63134f">Sequence generator</h3>
+<div class="outline-text-3" id="text-orge63134f">
 </div>
-<div id="outline-container-orge4cc260" class="outline-4">
-<h4 id="orge4cc260">seq</h4>
-<div class="outline-text-4" id="text-orge4cc260">
+<div id="outline-container-org9323f9c" class="outline-4">
+<h4 id="org9323f9c">seq</h4>
+<div class="outline-text-4" id="text-org9323f9c">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-builtin">echo</span> <span class="org-sh-quoted-exec">`seq 5`</span>
 </pre>
@@ -1076,9 +1093,9 @@ Hello Dhyan, Welcome to 2020
 </pre>
 </div>
 </div>
-<div id="outline-container-org88e4629" class="outline-4">
-<h4 id="org88e4629">seq with fixed width</h4>
-<div class="outline-text-4" id="text-org88e4629">
+<div id="outline-container-org5029b66" class="outline-4">
+<h4 id="org5029b66">seq with fixed width</h4>
+<div class="outline-text-4" id="text-org5029b66">
 <p>
 This is useful to generate fixed length numbers. Will be padded with zeros to the largest number
 </p>
@@ -1101,9 +1118,9 @@ This is useful to generate fixed length numbers. Will be padded with zeros to th
 </pre>
 </div>
 </div>
-<div id="outline-container-orgfcd9eeb" class="outline-4">
-<h4 id="orgfcd9eeb">Looping with seq</h4>
-<div class="outline-text-4" id="text-orgfcd9eeb">
+<div id="outline-container-orgf96bb4d" class="outline-4">
+<h4 id="orgf96bb4d">Looping with seq</h4>
+<div class="outline-text-4" id="text-orgf96bb4d">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-keyword">for</span> i<span class="org-keyword"> in</span> $(<span class="org-sh-quoted-exec">seq</span> 5); <span class="org-keyword">do</span>
    <span class="org-builtin">echo</span> $<span class="org-variable-name">i</span>
@@ -1142,9 +1159,9 @@ This is useful to generate fixed length numbers. Will be padded with zeros to th
 </div>
 </div>
 
-<div id="outline-container-org91eec44" class="outline-4">
-<h4 id="org91eec44">Looping with seq and interval</h4>
-<div class="outline-text-4" id="text-org91eec44">
+<div id="outline-container-org48a7847" class="outline-4">
+<h4 id="org48a7847">Looping with seq and interval</h4>
+<div class="outline-text-4" id="text-org48a7847">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-keyword">for</span> i<span class="org-keyword"> in</span> $(<span class="org-sh-quoted-exec">seq</span> 1 5 15); <span class="org-keyword">do</span>
    <span class="org-builtin">echo</span> $<span class="org-variable-name">i</span>
@@ -1175,9 +1192,9 @@ This is useful to generate fixed length numbers. Will be padded with zeros to th
 </div>
 </div>
 
-<div id="outline-container-orgbed3688" class="outline-4">
-<h4 id="orgbed3688">Multi-Loops with seq and interval</h4>
-<div class="outline-text-4" id="text-orgbed3688">
+<div id="outline-container-org8ed9bfb" class="outline-4">
+<h4 id="org8ed9bfb">Multi-Loops with seq and interval</h4>
+<div class="outline-text-4" id="text-org8ed9bfb">
 <p>
 You can skip some cycles with multiple <code>seq</code> in the same loop. 
 </p>
@@ -1235,28 +1252,72 @@ You can skip some cycles with multiple <code>seq</code> in the same loop.
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgf1c766f" class="outline-3">
-<h3 id="orgf1c766f">Date</h3>
-<div class="outline-text-3" id="text-orgf1c766f">
+<div id="outline-container-orgdc57972" class="outline-3">
+<h3 id="orgdc57972">Regular Expression</h3>
+<div class="outline-text-3" id="text-orgdc57972">
 </div>
-<div id="outline-container-orgc2bda0e" class="outline-4">
-<h4 id="orgc2bda0e">Seconds since Epoch</h4>
-<div class="outline-text-4" id="text-orgc2bda0e">
+<div id="outline-container-org61ac4ee" class="outline-4">
+<h4 id="org61ac4ee">Simple match</h4>
+<div class="outline-text-4" id="text-org61ac4ee">
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-variable-name">digit</span>=<span class="org-string">"You are 39 years old"</span>
+
+<span class="org-keyword">if</span> [[ $<span class="org-variable-name">digit</span> =~ [0-9] ]]; <span class="org-keyword">then</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"$digit has a digit"</span>
+<span class="org-keyword">else</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"oops"</span>
+<span class="org-keyword">fi</span>
+</pre>
+</div>
+
+<pre class="example">
+You are 39 years old has a digit
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org9ee9a2d" class="outline-4">
+<h4 id="org9ee9a2d">Starts with</h4>
+<div class="outline-text-4" id="text-org9ee9a2d">
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-variable-name">text</span>=<span class="org-string">"kpi4"</span>
+
+<span class="org-keyword">if</span> [[ $<span class="org-variable-name">text</span> =~ ^kpi* ]]; <span class="org-keyword">then</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"$text starts with kpi"</span>
+<span class="org-keyword">else</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"oops"</span>
+<span class="org-keyword">fi</span>
+</pre>
+</div>
+
+<pre class="example">
+kpi4 starts with kpi
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d2dd94" class="outline-3">
+<h3 id="org8d2dd94">Date</h3>
+<div class="outline-text-3" id="text-org8d2dd94">
+</div>
+<div id="outline-container-org6ced79c" class="outline-4">
+<h4 id="org6ced79c">Seconds since Epoch</h4>
+<div class="outline-text-4" id="text-org6ced79c">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-builtin">echo</span> <span class="org-sh-quoted-exec">`date +%s`</span>
 </pre>
 </div>
 
 <pre class="example">
-1582173734
+1599657758
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orgfc3f065" class="outline-4">
-<h4 id="orgfc3f065">Time elapsed</h4>
-<div class="outline-text-4" id="text-orgfc3f065">
+<div id="outline-container-orgf48bb15" class="outline-4">
+<h4 id="orgf48bb15">Time elapsed</h4>
+<div class="outline-text-4" id="text-orgf48bb15">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">startTime</span>=$(<span class="org-sh-quoted-exec">date</span> +%s)
 sleep 2
@@ -1272,9 +1333,9 @@ Was sleeping for 2
 </div>
 </div>
 
-<div id="outline-container-orgabebf0a" class="outline-4">
-<h4 id="orgabebf0a">Formatting time</h4>
-<div class="outline-text-4" id="text-orgabebf0a">
+<div id="outline-container-org8547cb5" class="outline-4">
+<h4 id="org8547cb5">Formatting time</h4>
+<div class="outline-text-4" id="text-org8547cb5">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">currentTime</span>=$(<span class="org-sh-quoted-exec">date</span> +%s)
 
@@ -1283,18 +1344,19 @@ Was sleeping for 2
 </div>
 
 <pre class="example">
-Current Time:  04:42:16
+Current Time:  13:22:40
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdc23c78" class="outline-3">
-<h3 id="orgdc23c78">PID</h3>
-<div class="outline-text-3" id="text-orgdc23c78">
+
+<div id="outline-container-orgc260d5e" class="outline-3">
+<h3 id="orgc260d5e">PID</h3>
+<div class="outline-text-3" id="text-orgc260d5e">
 </div>
-<div id="outline-container-org4bb8ba0" class="outline-4">
-<h4 id="org4bb8ba0">PID of most recently executed background job</h4>
-<div class="outline-text-4" id="text-org4bb8ba0">
+<div id="outline-container-org31c6b86" class="outline-4">
+<h4 id="org31c6b86">PID of most recently executed background job</h4>
+<div class="outline-text-4" id="text-org31c6b86">
 <div class="org-src-container">
 <pre class="src src-shell">sleep 2 &amp;
 <span class="org-builtin">echo</span> $<span class="org-variable-name">!</span>
@@ -1302,33 +1364,33 @@ Current Time:  04:42:16
 </div>
 
 <pre class="example">
-20432
+24772
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org05fc675" class="outline-2">
-<h2 id="org05fc675">External Utilities</h2>
-<div class="outline-text-2" id="text-org05fc675">
+<div id="outline-container-org5eb99fe" class="outline-2">
+<h2 id="org5eb99fe">External Utilities</h2>
+<div class="outline-text-2" id="text-org5eb99fe">
 </div>
-<div id="outline-container-org98aa1de" class="outline-3">
-<h3 id="org98aa1de">Curl</h3>
-<div class="outline-text-3" id="text-org98aa1de">
+<div id="outline-container-org01ac34f" class="outline-3">
+<h3 id="org01ac34f">Curl</h3>
+<div class="outline-text-3" id="text-org01ac34f">
 </div>
-<div id="outline-container-orgc8cbe47" class="outline-4">
-<h4 id="orgc8cbe47">Ignore SSL</h4>
-<div class="outline-text-4" id="text-orgc8cbe47">
+<div id="outline-container-org627be29" class="outline-4">
+<h4 id="org627be29">Ignore SSL</h4>
+<div class="outline-text-4" id="text-org627be29">
 <div class="org-src-container">
 <pre class="src src-shell">curl -k https://yarchive.net
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orge9c5ced" class="outline-4">
-<h4 id="orge9c5ced">Get HTTP Status code</h4>
-<div class="outline-text-4" id="text-orge9c5ced">
+<div id="outline-container-org9c51d49" class="outline-4">
+<h4 id="org9c51d49">Get HTTP Status code</h4>
+<div class="outline-text-4" id="text-org9c51d49">
 <div class="org-src-container">
 <pre class="src src-shell"><span class="org-variable-name">response</span>=$(<span class="org-sh-quoted-exec">curl</span> -k -m 1 --write-out %{http_code} --silent --output /dev/null https://www.google.com )
 
@@ -1342,13 +1404,13 @@ Current Time:  04:42:16
 </div>
 </div>
 </div>
-<div id="outline-container-org53d2cd7" class="outline-3">
-<h3 id="org53d2cd7">SED</h3>
-<div class="outline-text-3" id="text-org53d2cd7">
+<div id="outline-container-org55b3ca2" class="outline-3">
+<h3 id="org55b3ca2">SED</h3>
+<div class="outline-text-3" id="text-org55b3ca2">
 </div>
-<div id="outline-container-orgeaf821f" class="outline-4">
-<h4 id="orgeaf821f">Replace String</h4>
-<div class="outline-text-4" id="text-orgeaf821f">
+<div id="outline-container-orgf68cc2f" class="outline-4">
+<h4 id="orgf68cc2f">Replace String</h4>
+<div class="outline-text-4" id="text-orgf68cc2f">
 <div class="org-src-container">
 <pre class="src src-shell">cat input/application.properties
 </pre>
@@ -1376,30 +1438,249 @@ application_name=JEDI
 </div>
 </div>
 
-<div id="outline-container-org4c7c3e7" class="outline-3">
-<h3 id="org4c7c3e7">JQ</h3>
-<div class="outline-text-3" id="text-org4c7c3e7">
+<div id="outline-container-org9d4cdcf" class="outline-3">
+<h3 id="org9d4cdcf">JQ</h3>
+<div class="outline-text-3" id="text-org9d4cdcf">
 <p>
 <b>TODO</b>
 </p>
 </div>
 </div>
-<div id="outline-container-orgd9e099a" class="outline-3">
-<h3 id="orgd9e099a">XARGS</h3>
-<div class="outline-text-3" id="text-orgd9e099a">
+<div id="outline-container-org92933c2" class="outline-3">
+<h3 id="org92933c2">XARGS</h3>
+<div class="outline-text-3" id="text-org92933c2">
 <p>
 <b>TODO</b>
 </p>
 </div>
 </div>
-<div id="outline-container-org5a227c5" class="outline-3">
-<h3 id="org5a227c5">TEE</h3>
+<div id="outline-container-org8b22999" class="outline-3">
+<h3 id="org8b22999">TEE</h3>
+</div>
+</div>
+<div id="outline-container-org7844948" class="outline-2">
+<h2 id="org7844948">Worksheet</h2>
+<div class="outline-text-2" id="text-org7844948">
+</div>
+<div id="outline-container-org37c2d61" class="outline-3">
+<h3 id="org37c2d61">AWK Parsing file with variable</h3>
+<div class="outline-text-3" id="text-org37c2d61">
+<div class="org-src-container">
+<pre class="src src-shell">
+<span class="org-comment-delimiter"># </span><span class="org-comment">awk -v NEWTEXT=foo 'BEGIN{n=0} /START intelexchange ##/ {n=1} {if (n==0) {print $0}} /END intelexchange ##/ {n=0}' &lt; input/test.yaml</span>
+<span class="org-variable-name">APP_ID</span>=testapp
+
+<span class="org-variable-name">START</span>=<span class="org-string">"START $APP_ID ##"</span>
+<span class="org-variable-name">END</span>=<span class="org-string">"END $APP_ID ##"</span>
+awk -v <span class="org-variable-name">start</span>=<span class="org-string">"$START"</span> -v <span class="org-variable-name">end</span>=<span class="org-string">"$END"</span> <span class="org-string">'BEGIN{n=0} {if ($0 ~ start ){n=1} if (n==0){  print} if ($0 ~ end ) {n=0}}'</span> input/test.yaml
+<span class="org-comment-delimiter"># </span><span class="org-comment">awk '{print $0}' &lt; input/test.yaml</span>
+</pre>
+</div>
+
+<pre class="example">
+resolve:
+      backend: /usr/local/iin/{{ $Instance.instance }}/participants/{{ $value.name }}/resolve/backend
+      backendHash: {{ template "HashDir" (print "deploy/" $Instance.instance "/participants/" $value.name "/resolve/backend") }}      
+      ui: /usr/local/iin/{{ $Instance.instance }}/participants/{{  $value.name }}/resolve/ui
+      dbData: /usr/local/iin/{{ $Instance.instance }}/participants/{{  $value.name }}/resolve/mysql-data
+        {{- end }}
+        ##ADDED BY Poseidon - START testuser ##
+        {{- if eq .name "intelexchange"}}
+    intelexchange:
+      replicaCount: 1
+      database:
+        data: /usr/local/iin/{{ $Instance.instance }}/participants/{{ $value.name }}/intelexchange/mysql-data
+        name: iin_intelexchange
+      backend:
+        config: /usr/local/iin/{{ $Instance.instance }}/participants/{{ $value.name }}/intelexchange/config
+        hash: {{ template "HashDir" (print "deploy/" $Instance.instance "/participants/" $value.name "/intelexchange/config") }}
+        image:
+          name: jpm/iin-intelexchange-backend
+          tag: 0.5
+      ui:
+        image:
+          name: jpm/iin-intelexchange-ui
+          tag: 0.6
+        {{- end }}
+        ##ADDED BY Poseidon - END testuser ##
+        ##ADDED BY Poseidon - START intelexchange ##
+        {{- if eq .name "intelexchange"}}
+    intelexchange:
+      replicaCount: 1
+      database:
+        data: /usr/local/iin/{{ $Instance.instance }}/participants/{{ $value.name }}/intelexchange/mysql-data
+        name: iin_intelexchange
+      backend:
+        config: /usr/local/iin/{{ $Instance.instance }}/participants/{{ $value.name }}/intelexchange/config
+        hash: {{ template "HashDir" (print "deploy/" $Instance.instance "/participants/" $value.name "/intelexchange/config") }}
+        image:
+          name: jpm/iin-intelexchange-backend
+          tag: 0.5
+      ui:
+        image:
+          name: jpm/iin-intelexchange-ui
+          tag: 0.6
+        {{- end }}
+        ##ADDED BY Poseidon - END intelexchange ##
+
+        ##APP_BLOCK##
+</pre>
+</div>
+</div>
+<div id="outline-container-orgdbe06ea" class="outline-3">
+<h3 id="orgdbe06ea">Kuberentes Pod status checking</h3>
+<div class="outline-text-3" id="text-orgdbe06ea">
+<div class="org-src-container">
+<pre class="src src-shell">
+sort &lt; input/access.log
+
+</pre>
+</div>
+
+<pre class="example">
+cibc 2020/02/15 app
+cibc 2020/02/15 blocdoc
+cibc 2020/02/15 blocdoc
+cibc 2020/02/15 portal
+cibc 2020/02/15 portal
+cibc 2020/02/15 resolve
+cibc 2020/02/16 portal
+cibc 2020/02/17 app
+ITAU 2020/02/15 blocdoc
+ITAU 2020/02/15 portal
+ITAU 2020/02/16 portal
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-variable-name">NETWORKS</span>=<span class="org-string">"108.161.176.0/20 94.46.144.0/20 146.88.128.0/20 198.232.124.0/22</span>
+<span class="org-string">          23.111.8.0/22 217.22.28.0/22 64.125.76.64/27 64.125.76.96/27</span>
+<span class="org-string">          64.125.78.96/27 64.125.78.192/27 64.125.78.224/27 64.125.102.32/27</span>
+<span class="org-string">          64.125.102.64/27 64.125.102.96/27 94.31.27.64/27 94.31.33.128/27</span>
+<span class="org-string">          94.31.33.160/27 94.31.33.192/27 94.31.56.160/27 177.54.148.0/24</span>
+<span class="org-string">          185.18.207.65/26 50.31.249.224/27 50.31.251.32/28 119.81.42.192/27</span>
+<span class="org-string">          119.81.104.96/28 119.81.67.8/29 119.81.0.104/30 119.81.1.144/30</span>
+<span class="org-string">          27.50.77.226/32 27.50.79.130/32 119.81.131.130/32 119.81.131.131/32</span>
+<span class="org-string">          216.12.211.59/32 216.12.211.60/32 37.58.110.67/32 37.58.110.68/32</span>
+<span class="org-string">          158.85.206.228/32 158.85.206.231/32 174.36.204.195/32</span>
+<span class="org-string">          174.36.204.196/32"</span>
+
+<span class="org-keyword">for</span> IP<span class="org-keyword"> in</span> 108.161.184.123 108.161.176.123 192.168.0.1 172.16.21.99; <span class="org-keyword">do</span>
+    grepcidr <span class="org-string">"$NETWORKS"</span> &lt;(<span class="org-builtin">echo</span> <span class="org-string">"$IP"</span>) &gt;/dev/null &amp;&amp; <span class="org-sh-escaped-newline">\</span>
+        <span class="org-builtin">echo</span> <span class="org-string">"$IP is in MAXCDN range"</span> || <span class="org-sh-escaped-newline">\</span>
+        <span class="org-builtin">echo</span> <span class="org-string">"$IP is not in MAXCDN range"</span>
+<span class="org-keyword">done</span>
+</pre>
+</div>
+
+<pre class="example">
+108.161.184.123 is not in MAXCDN range
+108.161.176.123 is not in MAXCDN range
+192.168.0.1 is not in MAXCDN range
+172.16.21.99 is not in MAXCDN range
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-variable-name">NETWORKS</span>=<span class="org-string">"11.11.11.11/29 22.22.22.22/32"</span>
+
+<span class="org-variable-name">IP</span>=11.11.11.12
+
+grepcidr <span class="org-string">"$NETWORKS"</span> &lt;(<span class="org-builtin">echo</span> <span class="org-string">"$IP"</span>)
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">grepcidr "$IP" &lt;(echo "$NETWORKS")</span>
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-shell">
+<span class="org-variable-name">RT</span>=input/routing_table/*.json
+
+<span class="org-variable-name">IP</span>=11.11.11.11
+
+<span class="org-keyword">for</span> file<span class="org-keyword"> in</span> $<span class="org-variable-name">RT</span>;<span class="org-keyword">do</span>
+    <span class="org-variable-name">JSON</span>=$(&lt;$<span class="org-variable-name">file</span>)
+    <span class="org-comment-delimiter"># </span><span class="org-comment">echo $JSON  | jq -j '.[] | .remote_ip | join(" ")'</span>
+    <span class="org-comment-delimiter"># </span><span class="org-comment">echo "NEXT"</span>
+    <span class="org-builtin">readarray</span> -t cidrs &lt; &lt;(<span class="org-builtin">echo</span> $<span class="org-variable-name">JSON</span>  | jq -j <span class="org-string">'.[] | .remote_ip | join(" ")'</span>)
+
+    <span class="org-keyword">for</span> cidr<span class="org-keyword"> in</span> <span class="org-string">"${cidrs[@]}"</span>; <span class="org-keyword">do</span>
+       <span class="org-builtin">echo</span> <span class="org-string">"$cidr"</span>
+       <span class="org-builtin">echo</span> $<span class="org-variable-name">IP</span>
+       <span class="org-comment-delimiter"># </span><span class="org-comment">grepcidr "$cidr" &lt;(echo "$IP") &gt;/dev/null &amp;&amp; \</span>
+           <span class="org-comment-delimiter"># </span><span class="org-comment">echo $JSON  | jq -r '.[] | .displayName'</span>
+       <span class="org-comment-delimiter"># </span><span class="org-comment">grepcidr "$cidr" &lt;(echo "$IP")</span>
+    <span class="org-keyword">done</span>
+
+
+
+<span class="org-keyword">done</span>
+</pre>
+</div>
+
+<pre class="example">
+11.11.11.11/32 194.54.12.0/23 194.186.207.0/24
+11.11.11.11
+22.22.22.22/32 12.217.148.52/32 157.130.249.18/32 62.28.176.130/31 62.28.176.132/32 65.51.182.202/32 63.118.221.202/32 148.76.68.228/32 148.76.68.226/32 200.196.144.0/20 80.251.162.131/32 213.86.2.244/32
+11.11.11.11
+33.33.33.33/32 199.198.223.0/24 199.198.251.0/24
+11.11.11.11
+</pre>
+</div>
+</div>
+<div id="outline-container-org1a12783" class="outline-3">
+<h3 id="org1a12783">Regex</h3>
+<div class="outline-text-3" id="text-org1a12783">
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-keyword">function</span> <span class="org-function-name">getRepoDir</span>() {
+    <span class="org-variable-name">regex</span>=<span class="org-string">'/(.*)'</span>
+    [[ $<span class="org-variable-name">1</span> =~ $<span class="org-variable-name">regex</span> ]]
+
+    <span class="org-builtin">echo</span> <span class="org-string">"${BASH_REMATCH[1]}"</span>
+}
+
+<span class="org-keyword">function </span><span class="org-builtin">test</span>(){
+    <span class="org-builtin">echo</span> $(<span class="org-sh-quoted-exec">getRepoDir</span> <span class="org-string">"in-org/in-iam"</span>)
+}
+
+<span class="org-builtin">test</span>
+</pre>
+</div>
+
+<pre class="example">
+in-iam
+</pre>
+</div>
+</div>
+<div id="outline-container-org05b6ba3" class="outline-3">
+<h3 id="org05b6ba3">Bitwise operator</h3>
+<div class="outline-text-3" id="text-org05b6ba3">
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-variable-name">input</span>=1
+
+[[ $(( 1 &amp; $<span class="org-variable-name">input</span> )) -gt 0 ]] &amp;&amp;  <span class="org-builtin">echo</span> <span class="org-string">"Can Execute"</span>
+
+<span class="org-keyword">if</span> [[ $(( 2 &amp; $<span class="org-variable-name">input</span> )) -gt 0 ]]; <span class="org-keyword">then</span>
+  <span class="org-builtin">echo</span> <span class="org-string">"Can Write"</span>
+<span class="org-keyword">fi</span>
+
+<span class="org-keyword">if</span> [[ $(( 4 &amp; $<span class="org-variable-name">input</span> )) -gt 0 ]]; <span class="org-keyword">then</span>
+  <span class="org-builtin">echo</span> <span class="org-string">"Can Read"</span>
+<span class="org-keyword">fi</span>
+
+</pre>
+</div>
+
+<pre class="example">
+Can Execute
+</pre>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Dhyan Raj</p>
-<p class="date">Created: 2020-02-19 Wed 23:42</p>
+<p class="date">Created: 2020-09-09 Wed 09:22</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
