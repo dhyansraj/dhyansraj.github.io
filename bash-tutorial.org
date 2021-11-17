@@ -8,6 +8,8 @@
 #+HTML_HEAD: <style> li{max-width:800px;}</style>
 #+HTML_HEAD: <style> #table-of-contents{overflow:hidden;}</style>
 #+HTML_HEAD: <style> pre.src:hover:before {display:none;}</style>
+#+HTML_HEAD: <style>pre.src{background:#343131;color:white;border-radius: 5px; font-weight: bold;} </style>
+#+HTML_HEAD: <style>pre.example{border-radius: 5px; margin-right: 0px;} </style>
 #+PROPERTY: header-args :exports both
 #+INCLUDE: code.inc
 #+CALL: init()
@@ -41,7 +43,7 @@ echo The code is e${i}b # Correct output
 The code is e
 The code is e10b
 #+end_example
-** Arithmetic Operations on variables 
+** Arithmetic Operations on variables
 #+begin_src shell
 a=1
 b=2
@@ -74,7 +76,7 @@ echo $i
 
 * Arrays
 ** Single Dimensional Arrays
-*** Declaration 
+*** Declaration
 #+begin_src shell :results verbatim
 arr=(Bash "is simple" yet powerful )
 echo ${arr[0]}
@@ -115,9 +117,9 @@ We are using Bash in this tutorial and is generated with Emacs
 
 * Bash Script parameters
 ** Passing parameters to Bash scripts
-It is possible to pass multiple parameters to a Bash script. The parameters are accessible inside script as $1, $2, $3 etc. 
+It is possible to pass multiple parameters to a Bash script. The parameters are accessible inside script as $1, $2, $3 etc.
 #+begin_src shell :results verbatim
-cat lib/bash_parameters_test_1.sh 
+cat lib/bash_parameters_test_1.sh
 #+end_src
 
 #+RESULTS:
@@ -147,7 +149,7 @@ Use $0 to access the name of the script
 ** Accessing all parameters
 Use $@ to access all parameters
 #+begin_src shell :results verbatim
-cat lib/bash_parameters_test_2.sh 
+cat lib/bash_parameters_test_2.sh
 #+end_src
 
 #+RESULTS:
@@ -178,7 +180,7 @@ done
 #+end_note
 
 * Control Statements
-** If 
+** If
 *** Simple If
 #+begin_src shell
 result=OK
@@ -248,17 +250,17 @@ f=output/test.txt
 
 if [ -f $f ]; then
   cat $f
-else 
+else
   echo File doesn\'t exist
-fi 
+fi
 
 echo "This file is now created" > output/test.txt
 
 if [ -f $f ]; then
   cat $f
-else 
+else
   echo File doesn\'t exist
-fi 
+fi
 
 #+end_src
 
@@ -274,17 +276,17 @@ f=output/accounts
 
 if [ -d $f ]; then
   echo accounts directory exist
-else 
+else
   echo directory doesn\'t exist
-fi 
+fi
 
 mkdir output/accounts
 
 if [ -d $f ]; then
   echo accounts directory exist
-else 
+else
   echo directory doesn\'t exist
-fi 
+fi
 
 #+end_src
 
@@ -301,7 +303,7 @@ marks=85
 
 if [ $marks -ge 80 ]; then
     echo "You passed with distinction"
-fi 
+fi
 
 #+end_src
 
@@ -316,7 +318,7 @@ age=12
 
 if [ $age -le 15 ]; then
     echo "You can't apply for driver license yet"
-fi 
+fi
 
 #+end_src
 
@@ -379,10 +381,10 @@ done
 
 You can also use [[*Sequence generator]] in conjunction with for loops.
 * Functions
-Although statements can be written one after another, it would be ideal to group statements into functions or files for understand-ability and manageability. Multiple statements can be grouped in Bash script using the keyword */function/*. Functions can be called with parameters as well. 
+Although statements can be written one after another, it would be ideal to group statements into functions or files for understand-ability and manageability. Multiple statements can be grouped in Bash script using the keyword */function/*. Functions can be called with parameters as well.
 
 # There are two ways to invoke another script
-# - Execute the script using . operator (E.g =./another-script.sh=) 
+# - Execute the script using . operator (E.g =./another-script.sh=)
 # - Include the script and invoke statements as if they were written in the current script (E.g =source ./another-script.sh=)
 ** Simple Function Declarations
 Statements are executed in the order they are written, but function declarations are not executed unless they are invoked explicitly from other statements.
@@ -486,7 +488,7 @@ done
 | 11 |
 
 *** Multi-Loops with seq and interval
-You can skip some cycles with multiple =seq= in the same loop. 
+You can skip some cycles with multiple =seq= in the same loop.
 #+begin_src shell
 for i in $(seq 1 5 15; seq 50 10 100); do
    echo $i
@@ -536,8 +538,8 @@ fi
 oops
 #+end_example
 
-** Date 
-*** Seconds since Epoch 
+** Date
+*** Seconds since Epoch
 #+begin_src shell
 echo `date +%s`
 #+end_src
@@ -553,7 +555,7 @@ startTime=$(date +%s)
 sleep 2
 elapsedTime="$(($(date +%s)-$startTime ))"
 
-echo Was sleeping for $elapsedTime 
+echo Was sleeping for $elapsedTime
 #+end_src
 
 #+RESULTS:
@@ -653,7 +655,7 @@ awk -v start="$START" -v end="$END" 'BEGIN{n=0} {if ($0 ~ start ){n=1} if (n==0)
 #+begin_example
 resolve:
       backend: /usr/local/iin/{{ $Instance.instance }}/participants/{{ $value.name }}/resolve/backend
-      backendHash: {{ template "HashDir" (print "deploy/" $Instance.instance "/participants/" $value.name "/resolve/backend") }}      
+      backendHash: {{ template "HashDir" (print "deploy/" $Instance.instance "/participants/" $value.name "/resolve/backend") }}
       ui: /usr/local/iin/{{ $Instance.instance }}/participants/{{  $value.name }}/resolve/ui
       dbData: /usr/local/iin/{{ $Instance.instance }}/participants/{{  $value.name }}/resolve/mysql-data
         {{- end }}
@@ -698,7 +700,7 @@ resolve:
 
         ##APP_BLOCK##
 #+end_example
-** Kuberentes Pod status checking 
+** Kuberentes Pod status checking
 
 #+begin_src shell :results verbatim
 
